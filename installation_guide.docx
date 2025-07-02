@@ -1,0 +1,160 @@
+USER MANUAL
+
+## ⚙️ Installation Instructions
+
+1.1 System Requirements
+Hardware
+OS: Windows 10/11 or Linux (Ubuntu recommended)
+RAM: 4GB minimum (8GB recommended)
+Storage: At least 500MB of free disk space
+Touchscreen: Required for kiosk deployment
+Printer (optional): For receipts and reports
+Internet Connection: For real-time data sync (Wi-Fi or Ethernet)
+
+Software
+Browser: Latest version of Chrome or Firefox
+Local Server Stack:
+XAMPP / WAMP with:
+Apache
+PHP: 7.4 or 8.x
+MySQL: 5.7+ or MariaDB
+
+1.2 Installation Process
+1. Download the Source Code
+Get from the official repository, Google Drive, or provided USB.
+
+2. Install XAMPP
+Download from https://www.apachefriends.org
+Install and launch XAMPP.
+
+3. Start Required Services
+Open XAMPP Control Panel
+Start Apache and MySQL
+
+4. Place Files into XAMPP Directory
+Copy project folder to:
+
+C:\xampp\htdocs\your_project_folder
+
+
+5. Set Up the Database
+Open browser and go to: http://localhost/phpmyadmin
+Create a new database (e.g., pos_system)
+Click Import > Select .sql file > Click Go
+
+6. Configure the Database Connection
+Open config.php or db_connection.php in a code editor.
+Set:
+
+PHP
+
+$host = "localhost";      // The database server host (usually localhost if it's on the same server)
+$user = "root";           // The database username (root is the default superuser in MySQL)
+$pass = "";               // The password for the database user (empty in this case)
+$dbname = "pos_system";   // The name of the database to connect to
+
+
+7. Run the System
+Go to:
+
+
+http://localhost/your_project_folder/
+
+
+
+2. LOGIN GUIDE
+
+2.1 User Roles
+Admin: Full access to dashboard, inventory, users, audit logs
+ Customer/User: Limited access to POS/order system
+
+2.2 How to Login
+1.Open the system in your browser.
+2.Enter your Username and Password.
+3.Click Login.
+4.If credentials are correct, you’ll be redirected to your dashboard.
+
+## 🔐 Default Admin Login
+
+- **Username:** admin  
+- **Password:** admin123  
+> ⚠️ *Change password after first login for security.*
+
+---
+
+
+
+
+3. NAVIGATION GUIDE
+3.1 Main Dashboard
+Sales
+Inventory status
+Total transactions
+Best Selling products
+
+
+
+3.2 Modules
+
+### Admin Dashboard Modules
+| Module         | Description                                    |
+|----------------|------------------------------------------------|
+| Inventory      | Add, edit, delete products; manage stock       |
+| Sales          | View transactions and filter by date           |
+| Audit Trail    | View user activity logs                        |
+| Reports        | Export inventory and sales data                |
+| Settings       | Configure system defaults and receipt formats  |
+| Support Content| Manage help articles for kiosk (`?` button)    |
+
+
+
+3.3 POS/Ordering Flow (Customer Side)
+Tap to Start – Activates ordering session
+Browse Categories – Products grouped (e.g., Snacks, Drinks)
+Select Product – View name, image, price, and availability
+Add to Cart – Add item with preferred quantity
+View/Review Cart – Review items, update or remove
+Proceed to Checkout – Review total and confirm
+Order Confirmation
+Receipt is displayed digitally
+Optionally printed (if kiosk supports printing)
+Message Displayed:
+“Please proceed to the staff and hand over the cash payment with your receipt.”
+
+---
+
+## ❓ Troubleshooting
+
+| Issue                    | Solution                                       |
+|--------------------------|------------------------------------------------|
+| DB Connection Error      | Check config.php credentials; run MySQL        |
+| Login Fails              | Check username/password in phpMyAdmin          |
+| Buttons Not Working      | Check JavaScript console for errors            |
+| Nothing Loads            | Make sure Apache & MySQL are started (XAMPP)   |
+
+---
+
+## 📄 Documentation
+
+- `user_manual.docx` – Full user instructions  
+- `installation_guide.docx` – Local setup steps  
+- `index.txt` – File index list  
+- `sql/pos_system.sql` – Database file  
+
+---
+
+## 👥 Project Team
+
+- **Gabriel, Jhea Rixandra P.** – Project Leader / Lead Developer / Documentation  
+- **Nazareno, Adrian L.** – Front-End Developer  
+- **Delos Santos, Gwyn Diane C.** – GUI / UX Designer  
+- **Galicia, Jinggrey T.** – Backend Developer / Tester / Documentation  
+
+---
+
+## 📬 Contact
+
+- 📧 Email: gabriejhea0309@gmail.com  
+- 📞 Phone: +63 995 814 4641  
+
+---

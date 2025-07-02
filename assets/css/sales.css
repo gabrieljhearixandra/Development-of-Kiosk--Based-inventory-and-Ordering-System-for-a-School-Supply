@@ -1,0 +1,270 @@
+/* Sales Page Styles */
+.content-container {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.date-range-display {
+    font-size: 14px;
+    color: #666;
+    background: #f5f5f5;
+    padding: 8px 15px;
+    border-radius: 4px;
+}
+
+/* Filter Form Styles */
+.filter-card {
+    margin-bottom: 20px;
+}
+
+.filter-form {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 0;
+}
+
+.filter-form .form-group {
+    margin-bottom: 0;
+    flex: 1;
+    min-width: 180px;
+    max-width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.filter-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #555;
+    text-align: center;
+}
+
+.filter-form .form-control {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 13px;
+    height: 38px;
+    text-align: center;
+}
+
+.filter-form .btn-primary {
+    padding: 8px 16px;
+    height: 38px;
+    font-size: 13px;
+    white-space: nowrap;
+    margin-top: 25px;
+}
+
+@media (max-width: 768px) {
+    .filter-form {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .filter-form .form-group {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+    
+    .filter-form .btn-primary {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    background: #f0f7ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3a86ff;
+    font-size: 20px;
+}
+
+.stat-content h3 {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+}
+
+.stat-content h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Two Column Layout */
+.two-column-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (max-width: 1200px) {
+    .two-column-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tables */
+.card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.card-header {
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.card-header h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.table-container {
+    overflow-x: auto;
+    padding: 5px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.data-table th {
+    padding: 12px 15px;
+    text-align: left;
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #555;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.data-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #333;
+}
+
+.data-table tr:last-child td {
+    border-bottom: none;
+}
+
+.data-table tr:hover {
+    background-color: #f8f9fa;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .stat-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .stat-icon {
+        margin-bottom: 10px;
+    }
+}
+
+
+.filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 0 auto 25px auto; /* This centers the card */
+}
+
+.filter-form .form-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-form .btn {
+    flex: 0 0 auto;
+    margin-top: 0;
+    align-self: flex-end;
+    height: fit-content;
+}

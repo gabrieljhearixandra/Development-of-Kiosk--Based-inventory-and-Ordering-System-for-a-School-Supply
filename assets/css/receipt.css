@@ -1,0 +1,131 @@
+/* Receipt Container Styles */
+.receipt-container {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    overflow-y: auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.receipt {
+    font-family: 'Courier New', monospace;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 15px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Receipt Header Styles */
+.receipt-header {
+    text-align: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.receipt-header h2 {
+    margin: 5px 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.receipt-header p {
+    margin: 3px 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Receipt Info Styles */
+.receipt-info {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.receipt-info p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+/* Receipt Items Styles */
+.receipt-items {
+    margin-bottom: 15px;
+}
+
+.receipt-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.item-name {
+    flex: 2;
+    font-weight: bold;
+}
+
+.item-details {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Receipt Total Styles */
+.receipt-total {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 2px dashed #ddd;
+}
+
+.total-line {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Receipt Footer Styles */
+.receipt-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #777;
+    padding-top: 10px;
+    border-top: 1px dashed #ddd;
+}
+
+/* Print Button Styles */
+.btn-print {
+    background-color: #4a6baf;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.btn-print:hover {
+    background-color: #3a5a9f;
+}
+
+/* Responsive Adjustments */
+@media print {
+    .receipt {
+        box-shadow: none;
+        padding: 0;
+        width: 100%;
+    }
+    
+    .btn-print {
+        display: none;
+    }
+}

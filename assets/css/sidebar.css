@@ -1,0 +1,105 @@
+/* sidebar */
+:root {
+    --sidebar-width: 250px;
+    --primary-color: #343a40;
+    --secondary-color: #495057;
+    --text-color: #333;
+    --light-text: #adb5bd;
+    --white: #fff;
+    --card-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Reset for sidebar container */
+.sidebar-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: var(--sidebar-width);
+    height: 100vh;
+    z-index: 1000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Sidebar Styles Consistent across all pages */
+.sidebar {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--white);
+    height: 100%;
+    overflow-y: auto;
+    transition: var(--transition);
+}
+
+.sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-size: 1.3rem !important;
+    font-weight: 600;
+    color: var(--white) !important;
+}
+
+.sidebar-header p {
+    margin: 5px 0 0;
+    color: var(--light-text);
+    font-size: 0.85rem !important;
+}
+
+.nav {
+    list-style: none;
+    padding: 15px 0;
+    margin: 0;
+}
+
+.nav-item {
+    margin: 0;
+}
+
+.nav-link {
+    color: var(--light-text);
+    padding: 10px 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+    font-size: 0.95rem !important;
+}
+
+.nav-link i {
+    margin-right: 10px;
+    font-size: 1.1rem !important;
+    width: 20px;
+    text-align: center;
+}
+
+.nav-link:hover, 
+.nav-link.active {
+    color: var(--white) !important;
+    background-color: var(--secondary-color);
+}
+
+/* Main Content */
+.main-content {
+    margin-left: var(--sidebar-width);
+    padding: 20px;
+    transition: var(--transition);
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar-container {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+}

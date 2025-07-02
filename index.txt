@@ -1,0 +1,47 @@
+==============================
+📁 PROJECT FILE INDEX
+POS-KIOSK-SYSTEM
+==============================
+
+1. index.php
+   - Main entry point for the kiosk interface (customer-facing).
+
+2. login.php
+   - Admin login screen for accessing the admin panel.
+
+3. process_order.php
+   - Handles order processing from the kiosk interface.
+
+4. /admin/
+   - dashboard.php – Admin dashboard with sales stats and overview.
+   - inventory.php – Inventory management system.
+   - sales.php – Sales transaction records and details.
+   - audit_trail.php – System activity and user action logs.
+   - get_sales_detailes.php – Retrieves detailed sales data.
+   - settings.php – System configuration settings.
+   - support.php – Support and help section.
+
+5. /api/
+   - get_category.php – Fetches product category data.
+   - get_product.php – Retrieves product information.
+   - get_faqs.php – Returns FAQ data for support.
+
+6. /assets/
+   - /css/ – Stylesheets for all system components.
+   - /js/ – JavaScript files for interactive functionality.
+
+7. /includes/
+   - config.php – System configuration settings.
+   - db.php – Database connection handler.
+   - functions.php – Core system functions.
+   - auth.php – Authentication and security functions.
+   - Various specialized function files (inventory, receipts, audit, etc.).
+
+8. /uploads/products/
+   - Directory for storing product images.
+
+9. README.TXT
+   - Project overview, technologies used, and folder structure.
+
+10. index.txt
+    - This file — the complete project file index and reference.
